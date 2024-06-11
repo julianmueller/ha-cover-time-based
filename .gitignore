@@ -1,7 +1,8 @@
 /node_modules/
 /.rpt2_cache/
 /.idea/
-/.vscode/
+# /.vscode/
+/.venv/
 /dist/
 
 __pycache__/

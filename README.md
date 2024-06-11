@@ -43,29 +43,35 @@ Click here:
 ```
 cover:
   - platform: cover_time_based
-	devices:
-	  room_rolling_shutter:
-	   name: Room Rolling Shutter
-	   open_switch_entity_id: switch.wall_switch_right
-	   close_switch_entity_id: switch.wall_switch_left
-	   travelling_time_down: 23
-	   travelling_time_up: 25
-	   tilting_time_down: 2.3
-	   tilting_time_up: 2.7
+    devices:
+        room_rolling_shutter:
+            name: Room Rolling Shutter
+            open_switch_entity_id: switch.wall_switch_right
+            close_switch_entity_id: switch.wall_switch_left
+            travelling_time_down: 23
+            travelling_time_up: 25
+            tilting_time_down: 2.3
+            tilting_time_up: 2.7
+            icon: mdi:window-shutter
+            aliases:
+	            - room_rolling_shutter
+
 ```
 
 ### Options
 
-| Name                   | Type         | Requirement  | Description                                                 | Default |
-| ---------------------- | ------------ | ------------ | ----------------------------------------------------------- | ------- |
-| name                   | string       | **Required** | Name of the created entity                                  |         |
-| open_switch_entity_id  | state entity | **Required** | Entity ID of the switch for opening the cover               |         |
-| close_switch_entity_id | state entity | **Required** | Entity ID of the switch for closing the cover               |         |
-| stop_switch_entity_id  | state entity | *Optional*   | Entity ID of the switch for stopping the cover              | None    |
-| travelling_time_down   | int          | *Optional*   | Time it takes in seconds to close the cover                 | 30      |
-| travelling_time_up     | int          | *Optional*   | Time it takes in seconds to open the cover                  | 30      |
-| tilting_time_down      | float        | *Optional*   | Time it takes in seconds to tilt the cover all the way down | None    |
-| tilting_time_up        | float        | *Optional*   | Time it takes in seconds to tilt the cover all the way up   | None    |
+| Name                   | Type           | Requirement  | Description                                                 | Default            |
+| ---------------------- | -------------- | ------------ | ----------------------------------------------------------- | ------------------ |
+| name                   | string         | **Required** | Name of the created entity                                  |                    |
+| open_switch_entity_id  | state entity   | **Required** | Entity ID of the switch for opening the cover               |                    |
+| close_switch_entity_id | state entity   | **Required** | Entity ID of the switch for closing the cover               |                    |
+| stop_switch_entity_id  | state entity   | *Optional*   | Entity ID of the switch for stopping the cover              | None               |
+| travelling_time_down   | int            | *Optional*   | Time it takes in seconds to close the cover                 | 30                 |
+| travelling_time_up     | int            | *Optional*   | Time it takes in seconds to open the cover                  | 30                 |
+| tilting_time_down      | float          | *Optional*   | Time it takes in seconds to tilt the cover all the way down | None               |
+| tilting_time_up        | float          | *Optional*   | Time it takes in seconds to tilt the cover all the way up   | None               |
+| icon                   | string         | *Optional*   | Icon of the entity                                          | mdi:window-shutter |
+| aliases                | list\[string\] | *Optional*   | Alias names of the entity                                   | \[\]               |
 
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/Sese-Schneider/ha-cover-time-based.svg?style=for-the-badge
